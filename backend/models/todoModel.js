@@ -7,6 +7,12 @@ const todoSchema = mongoose.Schema(
             required: [true, 'Please add a text value']
 
         },
+
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: 'User'
+        },
     },
     {
         timestamps : true;
