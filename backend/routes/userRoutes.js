@@ -1,4 +1,4 @@
-
+const { protect } = require("../middleware/authMiddleware");
 const express = require('express');
 const router = express.Router();
 
@@ -11,6 +11,7 @@ const {
 router.post("/", registerUser);
 router.post("/login", loginUser);
 router.get(" /me", getLoggedInUser);
+router.get("/me", getLoggedInUser);
 
 module.exports = router;
 
